@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <h1>Rock Paper Scissors</h1>
+        <button id="reset-score" class="secondary-btn" type="button">Reset score</button>
+      </header>
+
+      <section class="scoreboard" aria-label="Scoreboard">
+        <div class="score-card player-card">
+          <span class="label">Player</span>
+          <strong id="player-score">0</strong>
+        </div>
+        <div class="score-card tie-card">
+          <span class="label">Ties</span>
+          <strong id="tie-score">0</strong>
+        </div>
+        <div class="score-card cpu-card">
+          <span class="label">CPU</span>
+          <strong id="cpu-score">0</strong>
+        </div>
+      </section>
+
+      <section class="arena" aria-live="polite">
+        <div class="choice-panel">
+          <h2>Choose your move</h2>
+          <div class="choices" role="group" aria-label="Game choices">
+            <button class="choice-btn" data-choice="rock" type="button" aria-label="Rock">
+              <span class="emoji">✊</span>
+              <span>Rock</span>
+            </button>
+            <button class="choice-btn" data-choice="paper" type="button" aria-label="Paper">
+              <span class="emoji">✋</span>
+              <span>Paper</span>
+            </button>
+            <button class="choice-btn" data-choice="scissors" type="button" aria-label="Scissors">
+              <span class="emoji">✌️</span>
+              <span>Scissors</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="result-box" id="result-box">
+          <p class="result-label">Round result</p>
+          <h2 id="result-text">Make a move to begin!</h2>
+          <div class="showdown">
+            <div class="pick">
+              <span class="pick-label">You</span>
+              <strong id="player-pick">—</strong>
+            </div>
+            <div class="vs">VS</div>
+            <div class="pick">
+              <span class="pick-label">CPU</span>
+              <strong id="cpu-pick">—</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
